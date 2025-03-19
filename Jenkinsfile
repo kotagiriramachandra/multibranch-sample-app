@@ -1,5 +1,5 @@
 pipeline {
-  agent {lable 'linux'}
+  agent {jenkins-agent}
   options {
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeppStr: '5', daysToKeepStr: '', numToKeepStr: '5')
     dsableConcurrentBuilds()
