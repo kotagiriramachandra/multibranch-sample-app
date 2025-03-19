@@ -5,7 +5,7 @@ pipeline {
     dsableConcurrentBuilds()
     }
   stages {
-    stage {'Hello')
+    stage {'Hello'}
       steps {
         echo 'Hello Developer'
       }
