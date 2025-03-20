@@ -10,5 +10,12 @@ pipeline {
         echo 'Hello Developer'
       }
     }
+    stage ('fix code') {
+      steps {
+        ssh '''
+	  cat README.md
+	  '''
+	}
+    }	
   }
 }
