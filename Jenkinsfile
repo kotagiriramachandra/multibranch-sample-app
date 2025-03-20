@@ -10,10 +10,5 @@ pipeline {
         echo 'Hello Developer'
       }
     }
-    stage ('fix code') {
-      steps {
-        echo "Fix is done"
-	}
-    }	
   }
 }
