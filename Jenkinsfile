@@ -16,9 +16,6 @@ pipeline {
       }
       steps {
         echo "Dev changes are done"
-	sh '''
-	  cat README.md
-	  '''
       }
     }	
   }
