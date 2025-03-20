@@ -12,7 +12,7 @@ pipeline {
     }
     stage ('fix code') {
       steps {
-        ssh '''
+        sh '''
 	  cat README.md
 	  '''
 	}
