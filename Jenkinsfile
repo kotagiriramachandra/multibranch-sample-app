@@ -1,13 +1,14 @@
 pipeline {
-  agent {jenkins-agent}
+  agent jenkins-agent
   options {
-    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeppStr: '5', daysToKeepStr: '', numToKeepStr: '5')
-    dsableConcurrentBuilds()
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
+    disableConcurrentBuilds()
   }
   stages {
-    stage {'Hello'}
+    stage ('Hello') {
       steps {
         echo 'Hello Developer'
       }
+    }
   }
 }
