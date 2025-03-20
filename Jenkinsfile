@@ -12,9 +12,7 @@ pipeline {
     }
     stage ('fix code') {
       steps {
-        sh '''
-	  cat README.md
-	  '''
+        echo "Fix is done"
 	}
     }	
   }
