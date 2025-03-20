@@ -10,5 +10,13 @@ pipeline {
         echo 'Hello Developer'
       }
     }
+    stage ('Dev code') {
+      when {
+        branch "dev-*"
+      }
+      steps {
+        echo "Dev changes are done"
+      }
+    }	
   }
 }
