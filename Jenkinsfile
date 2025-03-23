@@ -4,18 +4,25 @@ pipeline {
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
     disableConcurrentBuilds()
   }
+  parameters {
+    string(name: 'greeting', defaultValue: 'Hello', description: 'What should I say')
+    string(name:'gm', defaultvalue: 'Good Morning', description: 'what should i wish')
+  }
   stages {
     stage ('Hello') {
+      when {
+        parameter = ${greeting}
+      }
       steps {
-        echo 'Hello Developer'
+        echo "${greeting} Developer'
       }
     }
     stage ('Dev code') {
       when {
-        branch "dev-*"
+        parameter = ${gm}
       }
       steps {
-        echo "Dev changes are done"
+        echo "${gm} Developer"
       }
     }
     stage ('Data') {
