@@ -5,13 +5,13 @@ pipeline {
     disableConcurrentBuilds()
   }
   parameters {
-    string(name: 'greeting', defaultValue: 'Hello', description: 'What should I say')
+    string(name: 'greeting', defaultValue: ['Hello', 'Hi', 'Hey'], description: 'What should I say')
     string(name:'gm', defaultValue: 'Good Morning', description: 'what should i wish')
   }
   stages {
     stage ('Hello') {
       when {
-        expression { params.greeting == 'Hello|Hey|Hi' }
+        expression { params.greeting == 'Hello' | 'Hi' }
       }
       steps {
         echo "${greeting} Developer"
@@ -19,7 +19,7 @@ pipeline {
     }
     stage ('Dev code') {
       when {
-        expression { params.gm == 'Good Morning|How are you' }
+        expression { params.gm == 'Good Morning' }
       }
       steps {
         echo "${gm} Developer"
