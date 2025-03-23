@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { lable 'Windows' }
   options {
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
     disableConcurrentBuilds()
