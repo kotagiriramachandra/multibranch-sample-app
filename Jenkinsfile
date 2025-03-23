@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage ('Hello') {
       when {
-        parameter = ${greeting}
+        expression { params.greeting == 'Hello|Hey|Hi' }
       }
       steps {
         echo "${greeting} Developer"
@@ -19,7 +19,7 @@ pipeline {
     }
     stage ('Dev code') {
       when {
-        parameter = ${gm}
+        expression { params.gm == 'Good Morning|How are you' }
       }
       steps {
         echo "${gm} Developer"
