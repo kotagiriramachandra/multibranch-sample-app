@@ -6,7 +6,7 @@ pipeline {
   }
   parameters {
     string(name: 'greeting', defaultValue: 'Hello', description: 'What should I say')
-    string(name:'gm', defaultvalue: 'Good Morning', description: 'what should i wish')
+    string(name:'gm', defaultValue: 'Good Morning', description: 'what should i wish')
   }
   stages {
     stage ('Hello') {
