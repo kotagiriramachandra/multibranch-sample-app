@@ -14,7 +14,7 @@ pipeline {
         parameter = ${greeting}
       }
       steps {
-        echo "${greeting} Developer'
+        echo "${greeting} Developer"
       }
     }
     stage ('Dev code') {
