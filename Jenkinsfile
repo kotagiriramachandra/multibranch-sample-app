@@ -5,7 +5,7 @@ pipeline {
     disableConcurrentBuilds()
   }
   parameters {
-    string(name: 'greeting', defaultValue: ['Hello', 'Hi', 'Hey'], description: 'What should I say')
+    choice(name: 'greeting', choices: ['Hello', 'Hi', 'Hey'], description: 'What should I say')
     string(name:'gm', defaultValue: 'Good Morning', description: 'what should i wish')
   }
   stages {
