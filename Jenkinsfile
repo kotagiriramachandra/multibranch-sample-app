@@ -11,7 +11,8 @@ pipeline {
   stages {
     stage ('Hello') {
       when {
-        expression { params.greeting == 'Hello' | 'Hi' }
+        expression { params.greeting == 'Hello' ||
+		     params.greeting == 'Hi' }
       }
       steps {
         echo "${greeting} Developer"
