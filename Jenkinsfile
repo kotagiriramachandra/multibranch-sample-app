@@ -25,7 +25,7 @@ pipeline {
       }
       steps {
         echo "${gm} Developer"
-	helloWorld(dayOfWeek:"Tuesday",name:"Rama")
+	helloWorldExternal(dayOfWeek:"Tuesday",name:"Rama")
       }
     }
     stage ('Data') {
