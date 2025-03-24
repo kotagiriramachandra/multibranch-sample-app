@@ -25,7 +25,7 @@ pipeline {
       }
       steps {
         echo "${gm} Developer"
-	helloWorld()
+	helloWorld("Rama","Tuesday")
       }
     }
     stage ('Data') {
