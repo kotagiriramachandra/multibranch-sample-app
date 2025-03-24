@@ -1,3 +1,4 @@
+@Library('test_library') _
 pipeline {
   agent { label 'Windows' }
   options {
@@ -24,6 +25,7 @@ pipeline {
       }
       steps {
         echo "${gm} Developer"
+	helloWorld()
       }
     }
     stage ('Data') {
